@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation App - About Us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    header .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    section.about {
+      padding: 50px 0;
+    }
+
+    section.about h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .btn-about {
+      margin-top: 20px;
+    }
+
+    #aboutInfo {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Food Donation App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="samplefoodhomepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="samplefoodlogout.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>Welcome to the Food Donation App, a platform dedicated to reducing food waste and fighting hunger. Our mission is to connect food donors, volunteers, and charities to ensure that excess food reaches those in need.</p>
+      <p>With our user-friendly interface, individuals and businesses can easily donate surplus food items. Volunteers can contribute their time and effort to collect and distribute food donations, while charities can request and receive food supplies to support their programs.</p>
+      <p>By leveraging technology and community collaboration, we aim to make a positive impact on food insecurity and promote sustainability. Together, we can make a difference in the lives of individuals and families facing hunger.</p>
+      <p>Join us in our mission and help create a world where no one goes hungry!</p>
+      <button id="showAboutBtn" class="btn btn-primary btn-about">Show About Info</button>
+      <p id="aboutInfo">We are a non-profit organization dedicated to reducing food waste and helping those in need. Our mission is to connect food donors with charities to ensure that excess food is distributed to those who need it the most. Together, we can make a difference.</p>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('#showAboutBtn').click(function() {
+        $('#aboutInfo').show();
+      });
+    });
+  </script>
+</body>
+</html>

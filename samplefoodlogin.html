@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation App - Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    header .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    section.login {
+      padding: 50px 0;
+    }
+
+    section.login h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .btn-login {
+      margin-top: 20px;
+    }
+
+    #registrationLink {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Food Donation App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#samplefoodregisterpage.html">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="login">
+    <div class="container">
+      <h2>Login to Your Account</h2>
+      <form id="loginForm" method="POST">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="submit" id="loginBtn" class="btn btn-primary btn-login" onsubmit="">Login</button>
+        <p id="loginError" class="text-danger mt-3"></p>
+        <p id="registrationLink">Not registered yet? <a href="samplefoodregisterpage.html">Register here</a></p>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="logindb.js"></script>
+  <script>
+   
+
+
+
+  </script>
+  
+</body>
+</html>

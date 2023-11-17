@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation App - Logout</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    header .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    section.logout {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Food Donation App</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="logout">
+    <div class="container">
+      <h2>Logout</h2>
+      <p>Are you sure you want to logout?</p>
+      <button id="logoutBtn" class="btn btn-primary">Logout</button>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#logoutBtn').click(function() {
+        // Clear session storage
+        sessionStorage.clear();
+        
+        // Redirect to login page
+        window.location.href = 'samplefoodlogin.html';
+      });
+    });
+  </script>
+</body>
+</html>

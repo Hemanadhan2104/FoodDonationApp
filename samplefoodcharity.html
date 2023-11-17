@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Donation App - Charity</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      padding: 10px;
+    }
+
+    header .navbar-brand {
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    section.charity {
+      padding: 50px 0;
+    }
+
+    section.charity h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    .form-control {
+      margin-bottom: 20px;
+    }
+
+    .btn-charity {
+      margin-top: 20px;
+    }
+
+    #charitySuccess {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Food Donation App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="samplefoodhomepage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="samplefoodlogout.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="charity">
+    <div class="container">
+      <h2>Charity Request</h2>
+      <form id="charityForm" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" id="charityBtn" class="btn btn-primary btn-charity">Submit Request</button>
+        <p id="charitySuccess">Thank you for your charity request!</p>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      $('#charityForm').submit(function(event) {
+        event.preventDefault();
+
+        // Get form data
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+
+        // Create charity object
+        var charity = {
+          name: name,
+          email: email,
+          message: message
+        };
+
+        // Store charity object in session storage
+        sessionStorage.setItem('charity', JSON.stringify(charity));
+
+        // Show success message
+        $('#charitySuccess').show();
+
+        // Clear form fields
+        $('#name').val('');
+        $('#email').val('');
+        $('#message').val('');
+      });
+    });
+  </script>
+</body>
+</html>
